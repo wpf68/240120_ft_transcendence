@@ -1,0 +1,120 @@
+@keyframes animation {
+    0% {
+        filter: brightness(1);
+    }
+
+    50%{
+        filter: brightness(1.75);
+    }
+
+    100%{
+        filter: brightness(1);
+    }
+    
+}
+
+
+
+
+.Container_two{
+    display: block;
+    margin-top: 10%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: rgba(200, 206, 214, 0.4);
+    border: gray 1px solid;
+    box-shadow: 4px 4px 15px #dbdcdd;   
+}
+
+.leader-title{
+    font-family: Retro;
+    text-shadow: 5px 5px 15px #e0e2e4;
+    font-size: 4rem;
+}
+
+.leader-list{
+    font-size: 1.5rem;
+    list-style: none;
+    font-family: Retro;
+}
+
+.leader{
+    border-bottom: 1px solid gray;
+    margin-bottom: 1%;
+}
+
+.leader .first{
+    margin-right: 2%;
+    font-size: 2.5rem;
+    background: linear-gradient(#dbc230, #e9cd50);
+    font-weight: bolder;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.5px black; 
+    animation-duration: 5s;
+    animation-name:  animation;
+    animation-iteration-count: infinite;
+}
+
+.leader .second{
+    margin-right: 2%;
+    font-size: 2.2rem;
+    background: linear-gradient(#b4b4b2, #e2e2dd);
+    font-weight: bolder;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.5px black; 
+
+}
+
+.leader .third{
+    margin-right: 2%;
+    font-size: 1.9rem;
+    background: linear-gradient(#6d5233, #966143);
+    font-weight: bolder;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.5px black;
+
+}
+
+.leader .others{
+    margin-right: 2%;
+    font-size: 1.5rem;
+    background: linear-gradient(#070707, #363635);
+    font-weight: bolder;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.5px black;
+
+}
+
+.leader .leader-user {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.leader .leader-user img {
+	height: 50px;
+	width: 50px;
+	margin: 5px 10px;
+    border-radius: 50%;
+    border: solid black 1px;
+}
+
+.leader .link {
+    text-decoration: none;
+    color: black;
+}
+
+.leader .link:hover {
+    font-size: 1.3em;
+}

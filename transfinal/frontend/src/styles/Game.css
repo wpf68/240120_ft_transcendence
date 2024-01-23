@@ -1,0 +1,200 @@
+.pGame .game
+{
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(238, 238, 238, 0.3);
+    box-shadow: 2px 2px 10px rgb(230, 219, 219);
+}
+
+.pGame .players-display
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
+	width: fit-content;
+	margin-bottom: 5px;
+}
+
+.pGame .players-icon
+{
+	width: 100px;
+	height: 100px;
+	align-items: start;
+	border-radius: 50%;
+}
+
+.pGame .players-name
+{
+	font-family: 'Mario';
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.pGame .queue
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	font-family: 'Mario';
+	font-size: 1.5em;
+	margin: 50px 0px;
+}
+
+.pGame .force-center
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.pGame .btn-triggers
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.pGame .btn-triggers button
+{
+	width: 100px;
+	align-items: start;
+	font-family: 'Mario';
+	font-size: 1em;
+	color: red;
+}
+
+.pGame .theme-selection
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0px auto;
+	width: fit-content;
+}
+
+
+.pGame .theme-title
+{
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 1.3em;
+	margin: 20px auto 0 auto;
+}
+
+.pGame .theme-selected
+{
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 1.3em;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.pGame .btn-theme
+{
+	width: 150px;
+	height: 50px;
+	align-items: start;
+	font-family: 'Mario';
+	font-size: 1em;
+}
+
+.pGame .gameCanvas
+{
+	width: 30%;
+	margin: 0 auto;
+	background-color: rgba(238, 238, 238, 0.3);
+	box-shadow: 20px 20px 10px rgb(230, 219, 219);
+}
+
+.pGame .Title-game
+{
+    font-family: 'Mario';
+    font-size: 5em;
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 5px 3px 20px rgb(69, 78, 70);
+}
+
+.pGame .btn-party
+{
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    height: 120px;
+    font-family: Mario;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+.pGame .input-party
+{
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 40px;
+    font-family: Mario;
+    color: black;
+    font-size: 1.2rem;
+    text-align: start;
+}
+
+.pGame .btn-party#btnA
+{
+    background-color: red;
+}
+
+.pGame .btn-party#btnB
+{
+    background-color: green;
+}
+
+.pGame .btn-party#btnC
+{
+	background-color: goldenrod;
+}
+
+.pGame .btn-party:hover + .hidden-text
+{
+    display: block;
+}
+
+.pGame .hidden-text
+{
+    margin: 2%;
+    display: none;
+    text-align: center;
+    align-items: center;
+    font-family: 'Mario';
+    font-size: 1em;
+}
+
+.pGame .img-solo
+{
+    width: 100px;
+    height: 130px;
+    align-items: start;
+    margin-top: -2%;  
+}
+
+.pGame .selector
+{
+	display: flex;
+	flex-direction: column;
+}

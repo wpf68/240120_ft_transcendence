@@ -1,0 +1,74 @@
+# ############################################################################ #
+#          .-.                                                                 #
+#    __   /   \   __                                                           #
+#   (  `'.\   /.'`  )  docker-compose.yaml                                     #
+#    '-._.(;;;)._.-'                                                           #
+#    .-'  ,`"`,  '-.                                                           #
+#   (__.-'/   \'-.__)   By: Rosie (https://github.com/BlankRose)               #
+#       //\   /        Last Updated: January 19, 2024 [03:21 pm]               #
+#      ||  '-'                                                                 #
+# ############################################################################ #
+
+version: '3'
+
+services:
+
+  # Frontend written in React
+  frontend:
+    container_name: pong-frontend
+    image: pong-front:latest
+    build: ./frontend
+    ports:
+      - ${WEB_ACCESS_PORT:-5500}:${WEB_ACCESS_PORT:-5500}
+    environment:
+      - PORT=${WEB_ACCESS_PORT:-5500}
+      - REACT_APP_API_PORT=${API_ACCESS_PORT:-5501}
+      - REACT_APP_API_UID=${API_UID:?}
+    volumes:
+      - ${PWD:-.}/frontend/src:/app/src:ro
+      - ${PWD:-.}/frontend/public:/app/public:ro
+    restart: always
+
+  # Backend written in NestJS
+  backend:
+    container_name: pong-backend
+    image: pong-back:latest
+    build: ./backend
+    ports:
+      - ${API_ACCESS_PORT:-5501}:3001
+    environment:
+      - API_UID=${API_UID:?}
+      - API_SECRET=${API_SECRET:?}
+      - JWT_SECRET=${JWT_SECRET:?}
+      - POSTGRES_USER=${POSTGRES_USER:?}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:?}
+      - POSTGRES_DB=${POSTGRES_DB:?}
+    volumes:
+      - ${PWD:-.}/backend/src:/app/src
+    networks:
+      - pong-data
+    restart: always
+
+  # Database using PostgreSQL
+  database:
+    container_name: pong-database
+    image: postgres:latest
+    expose:
+      - "5432"
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:?}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:?}
+      - POSTGRES_DB=${POSTGRES_DB:?}
+    volumes:
+      - pong-data:/var/lib/postgresql/data
+    networks:
+      - pong-data
+    restart: always
+
+networks:
+  pong-data:
+    driver: bridge
+    name: pong-data
+
+volumes:
+  pong-data:

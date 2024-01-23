@@ -1,0 +1,16 @@
+.history-item{
+    list-style: none;
+    color: black;
+    font-family: 'Retro';
+    font-size: 1.5rem;
+    border-bottom: solid black 1px;
+}
+
+.link-name{
+    text-decoration: none;
+    color: #3a3c42;
+}
+
+.link-name:hover{
+    font-weight: bolder;
+}

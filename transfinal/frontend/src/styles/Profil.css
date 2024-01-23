@@ -1,0 +1,130 @@
+.Container{
+    padding-top: 2%;
+    margin-top: 2%;
+    margin-left: 5%;
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-areas:
+	    "profil"
+	    "stats"
+	    "historique";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.CardProfil{
+    box-shadow: 15px 10px 20px black;
+}
+
+.profil{
+    grid-area: profil;
+    display: flex;
+    flex-direction: row;
+}
+
+.stats{
+    grid-area: stats;   
+}
+
+.historique{
+    grid-area: historique;
+}
+
+.historique{
+    height: 15%;
+    border-radius: 5%;
+    font-family: Retro;
+}
+
+.Profil-avatar{
+    height: 150px;
+    width:150px;
+    border-radius: 50%;
+    border: solid black 1px;
+	background-size: cover;
+	background-position: center;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.Profil-username{
+    margin-left: 5%;
+    margin-top: 8%;
+    font-size: 2rem;
+    font-family: Retro;
+    color: #3a3c42;
+}
+
+.updateProfile{
+    margin-top: 8%;
+    margin-left: 5%;
+    text-decoration: none;
+    background-color: rgb(127, 127, 137);
+    color: white;
+    border-radius: 10%;
+    box-shadow: 10px 5px 5px black;
+    text-align: center;
+    vertical-align: middle;
+    width: 150px;
+    height: 40px;
+    font-family: Retro;
+}
+
+.updateProfile:hover{
+    background-color: rgb(73, 71, 71);
+}
+
+.list-stat{
+    list-style: none;
+}
+
+.Profil-stat{
+    margin:3%;
+    margin-left: 5%;
+    font-size: 1.5rem;
+    font-family: Retro;
+    text-align: justify;
+    line-height: 10px;
+    color: #3a3c42;
+}
+
+.Profil-load {
+	width: 80%;
+	margin: auto;
+	margin-top: 50px;
+}
+
+.button-h {
+    margin-left: 45%;
+    margin-right: 45%;
+    border-radius: 10%;
+    max-height: 50px;
+    max-width: 150px;
+    box-shadow: 10px 5px 5px black;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(127, 127, 137);
+    color: white;
+}
+
+.history-list{
+    margin-top: 2%;
+    padding-bottom: 2px;
+    display: block;
+    text-align: center;
+    height: 500px;
+    scrollbar-width: auto;
+    overflow-y: scroll;
+    border: 1px solid black;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-shadow: 10px 5px 7px black;
+
+}
+
+.empty-h{
+    margin-top: 2%;
+    text-align: center;
+}
